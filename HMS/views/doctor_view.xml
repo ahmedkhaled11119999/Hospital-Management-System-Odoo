@@ -26,7 +26,7 @@
             </field>
         </record>
         <menuitem id="HMS_doctor_menu" name="Doctors"
-                  parent="HMS_root_menu" action="action_doctor">
+                  parent="HMS_root_menu" action="action_doctor" groups="HMS.hms_manager_group">
         </menuitem>
 
     </data>

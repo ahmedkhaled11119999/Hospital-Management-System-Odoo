@@ -61,7 +61,8 @@
                                     <field name="pcr" />
                                     <field name="CR_ratio" attrs="{'required':[('pcr','=',True)]}" />
                                     <field name="history" attrs="{'invisible':[('age','&lt;','50')]}"/>
-                                    <field name="doctors" widget="many2many_tags" attrs="{'readonly':[('department_id','=',False)]}">
+                                    <field name="doctors" widget="many2many_tags" attrs="{'readonly':[('department_id','=',False)]}"
+                                    groups="HMS.hms_manager_group">
                                         <tree>
                                             <field name="first_name"/>
                                             <field name="last_name"/>

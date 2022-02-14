@@ -55,7 +55,11 @@ class Patient(models.Model):
 
     @api.onchange('birth_date')
     def _on_birth_date_change(self):
-        self.age = date.today().year - self.birth_date.year
+        if self.birth_date:
+            self.age = date.today().year - self.birth_date.year
+        else:
+            self.birth_date = '2022-01-01'
+
 
     @api.onchange('age')
     def _on_age_change(self):
